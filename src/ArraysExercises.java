@@ -27,7 +27,7 @@ public class ArraysExercises {
 
     public static Person[] addPerson(Person[] oldArr, Person newPerson){
         Person[] newArr = Arrays.copyOf(oldArr, oldArr.length + 1);
-        newArr[oldArr.length - 1] = newPerson;
+        newArr[oldArr.length - 1] = newPerson; // length -1 is adding a new element to the end of the newArr array, which is a copy of the oldArr array
 
         System.out.println(newArr[oldArr.length - 1].getName());
         return newArr;
