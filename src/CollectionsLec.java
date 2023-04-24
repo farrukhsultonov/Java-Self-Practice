@@ -228,5 +228,26 @@ public class CollectionsLec {
         authorsBooks.clear();
         System.out.println("authorsBooks = " + authorsBooks);
         System.out.println("authorsBooks.isEmpty() = " + authorsBooks.isEmpty());
+
+
+//        -------------------------------- Why use an ArrayList vs. a HashMap? --------------------------------
+//        ArrayList and HashMap are two different data structures in Java that serve different purposes.
+
+//ArrayList is a dynamic array that can store a collection of elements of the same type. It is an ordered collection, meaning that the elements in the list have a specific order, and each element can be accessed using an index. ArrayList is useful when you want to store and retrieve elements sequentially, and you know the index of the element you want to access.
+
+//HashMap, on the other hand, is an implementation of a hash table, which is a data structure that stores key-value pairs. Each element in the map is identified by a unique key, and the value associated with that key can be retrieved efficiently. HashMap is useful when you want to store and retrieve elements based on a specific key, rather than their position in the collection.
+
+//So, the choice between ArrayList and HashMap depends on what you want to do with your data. If you need to access your elements based on their position in the list, use ArrayList. If you need to access your elements based on a specific key, use HashMap.
+
+
+
+        //        -------------------------------- Why use an Array vs. an ArrayList? --------------------------------
+//        Arrays and ArrayLists are both used to store collections of elements in Java, but they have some differences that make them more suitable for different scenarios.
+
+//Arrays are fixed-size collections of elements that can be of any type. Once an array is created, its size cannot be changed. Arrays are generally more efficient in terms of memory usage and performance when accessing elements by index. They are a good choice when you know the size of the collection beforehand and you don't need to add or remove elements frequently.
+
+//ArrayLists, on the other hand, are dynamic arrays that can grow or shrink in size as needed. They are implemented using an array internally, but they provide additional methods for adding, removing, and accessing elements. ArrayLists are a good choice when you need to add or remove elements frequently, or when you don't know the size of the collection beforehand.
+
+//In general, if you need to create a fixed-size collection of elements and you know the size beforehand, it's more efficient to use an array. If you need a dynamic collection that can grow or shrink in size, or if you need to add or remove elements frequently, it's more convenient to use an ArrayList.
     }
 }
