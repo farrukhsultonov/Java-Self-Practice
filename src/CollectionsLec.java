@@ -171,8 +171,8 @@ public class CollectionsLec {
         System.out.println("favAuthors.isEmpty() = " + favAuthors.isEmpty());
 
         //.remove() - well, WOOPS, let's get rid of that 7
-        Integer toRemove = new Integer(7);
-        favNumbers.remove( toRemove);
+//        Integer toRemove = new Integer(7);
+        favNumbers.remove(7);
         System.out.println("favNumbers = " + favNumbers);
 
         //What if our arrayList had an index and value match?
@@ -198,7 +198,7 @@ public class CollectionsLec {
 
         //So - let's .get some keys and see their values
         System.out.println("authorsBooks.get(\"Kurt Vonnegut\") = " + authorsBooks.get("Kurt Vonnegut"));
-        System.out.println("authorsBooks.get(\"Isaac Asimov\") = " + authorsBooks.get("Isaac Asimov"));
+        System.out.println("authorsBooks.get(\"Isaac Asimov\") = " + authorsBooks.get("Isaac Asimov")); // returns null
 
         //What if I didn't WANT null
         System.out.println("authorsBooks.getOrDefault(\"Isaac Asimov\", \"No book found for author\") = " + authorsBooks.getOrDefault("Isaac Asimov", "No book found for author"));
