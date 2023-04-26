@@ -4,78 +4,66 @@ import java.util.HashMap;
 public class CollectionsLec {
 
 //    Java Collections
-//
+
 //### What is a Data Structure?
-//
+
 //- A way of storing and organizing data for effective access and modification.
-//
+
 //### What are Collections?
-//
+
 //- A Collection is a data structure that can be used to store and group objects.
 //- Java Collections are not part of the native language, but are included in the Java standard library.
 //- Collection is actually an interface that is extended by a few sub-interfaces like List, Set and Queue.
 //- Today we will be covering a specific subtype of List: ArrayList
-//
+
 //[Java Docs - Collection interface](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)
-//
+
 //### What are Maps?
-//
+
 //- Maps are another data structure provided in the Java standard library.
 //- It is not a subtype of Collection, therefore it behaves differently.
 //- Maps are intended to store key-value pairs, similar to Objects in JavaScript.
 //- Today we will be covering a specific subtype of Map: HashMap
-//
+
 //** Both of these libraries can be imported into a Class for use **
-//
+
 //### ArrayList
-//
+
 //- The ArrayList type acts like a wrapper around a native Java array.
 //- The methods available on an ArrayList allow us to easily manipulate the ArrayList when adding or accessing elements.
 //- Unlike Arrays in JavaScript however, ArrayLists can only hold Objects and they must be of the same type.
 //- Luckily, Java already provides us with "wrapper" classes around primitive types which will allow us to store data like Integers and Doubles in our Collections.
-//
+
 //### HashMap
-//
+
 //- Similar to Objects in JavaScript, HashMaps store data in key-value pairs
 //- Keys should all be the same type
 //- Values should all be the same type
 //- Keys and Values do NOT have to be the same type. (ie. Keys are Strings and Values are Integers)
-//
+
 //[Assigning to ArrayList vs List](https://stackoverflow.com/questions/14974749/assigning-arraylist-to-list)
 
 
 
-
-
 //    *** JAVA II - Collections ***
-//
+
 //Collections we will talk about: ArrayList and HashMap
-//
-//
+
 //Collection:
 //- a data structure that can be used to group, or collect, objects
 //- Java standard library: a collection of code that comes with Java, contains collections
 //- java.util package has collection classes
-//
-//
+
+
 //Array Lists:
 //- represents an array that can change its size
 //- elements must all be objects, and same type
 //- ArrayList is like a wrapper around an array that handles resizing for you
 //- they have methods that handle common array operations
-//
+
 //SYNTAX: ArrayList<String> roasts = new ArrayList<>();
-//
-//Method	        Description
-//.size	        returns the number of elements in the array
-//.add	        add an element to the collection (optionally) at a specified index
-//.get	        return the element at the specified index
-//.indexOf        return the first found index of the given item, or -1 if not found
-//.contains	    check if a collection contains a given element
-//.lastIndexOf	find the last index of the given element, -1 if not found
-//.isEmpty	    check if the list is empty
-//.remove	        remove the first occurrence of an item, or an item at a given index
-//
+
+
 //NOTE:
 //- specify type in collection with <>
 //- must contain objects, we specify Integer instead of int
@@ -83,23 +71,16 @@ public class CollectionsLec {
 //- no length property, use .size()
 //- collections all have toString methods on them
 //- return value of .remove depends on how it is invoked (index returns element, object returns boolean)
-//
-//
-//
+
+
+
 //Hash Maps:
 //- data structure for key-value pairs
 //- ALL the keys in the hash map must be of the same type
 //- ALL the values must be of the same type
 //- BUT keys and the values don't necessarily have to be the same type
-//
+
 //SYNTAX: HashMap<String, String> usernames = new HashMap<>();
-//
-//Method	            Description
-//.put	            set a key-value pair
-//.get	            return the value associated with the given key, or null
-//.getOrDefault	    like .get, but with a defined value instead of null
-//.containsKey	    check if a key exists in the map
-//.containsValue	    check if a value exists in the map
 
 
 
@@ -114,6 +95,8 @@ public class CollectionsLec {
         //I'd like to add in a number before it [index 0] that's my real favorite number
         favNumbers.add(0,222); // specifying an index
         favNumbers.add(2,13);
+
+        System.out.println(favNumbers);
 
 
         //Let's go GET something at index X
@@ -171,8 +154,8 @@ public class CollectionsLec {
         System.out.println("favAuthors.isEmpty() = " + favAuthors.isEmpty());
 
         //.remove() - well, WOOPS, let's get rid of that 7
-//        Integer toRemove = new Integer(7);
-        favNumbers.remove(7);
+        Integer toRemove = new Integer(7);
+        favNumbers.remove(toRemove);
         System.out.println("favNumbers = " + favNumbers);
 
         //What if our arrayList had an index and value match?
@@ -191,43 +174,36 @@ public class CollectionsLec {
 
 
 //       ------------------------------------------ HashMap ------------------------------------------
-        HashMap<String, String> authorsBooks = new java.util.HashMap<>();
+        // We'll start by defining a hash map
+        HashMap<Integer, String> usernames = new HashMap<>();
 
-        authorsBooks.put("Kurt Vonnegut", "Cat's Cradle");
-        authorsBooks.put("J.D. Salinger", "Franny and Zooey");
+// and putting some data into it
+        usernames.put(1, "ryanorsinger");
+        usernames.put(2, "zgulde");
+        usernames.put(3, "fmendozaro");
+        usernames.put(4, "jreich5");
 
-        //So - let's .get some keys and see their values
-        System.out.println("authorsBooks.get(\"Kurt Vonnegut\") = " + authorsBooks.get("Kurt Vonnegut"));
-        System.out.println("authorsBooks.get(\"Isaac Asimov\") = " + authorsBooks.get("Isaac Asimov")); // returns null
+        System.out.println(usernames);
+// {1=ryanorsinger, 2=zgulde, 3=fmendozaro, 4=jreich5}
 
-        //What if I didn't WANT null
-        System.out.println("authorsBooks.getOrDefault(\"Isaac Asimov\", \"No book found for author\") = " + authorsBooks.getOrDefault("Isaac Asimov", "No book found for author"));
+// obtaining values from the hash map by key
+        usernames.get(1); // "ryanorsinger"
+        usernames.get(5); // null
+        usernames.getOrDefault(6, "gocodeup"); // "gocodeup"
 
-        //Well, how do I find if the key is in my HashMap?
-        System.out.println("authorsBooks.containsKey(\"Isaac Asimov\") = " + authorsBooks.containsKey("Isaac Asimov"));
-        System.out.println("authorsBooks.containsKey(\"Kurt Vonnegut\") = " + authorsBooks.containsKey("Kurt Vonnegut"));
+// checking if keys or values are present
+        usernames.containsKey(3); // true
+        usernames.containsValue("fmendozaro"); // true
 
-        //Mo' methods, mo' problems
-        //The situation: What if I don't want to override the key-value pair?
-        authorsBooks.put("Kurt Vonnegut", "Slaughterhouse Five");
-        //Instead of put - let's use PUT IF ABSENT
-        authorsBooks.putIfAbsent("Kurt Vonnegut", "Welcome to The Monkey House");
+        for(int i = 1; i < usernames.size(); i++){
+            System.out.println(usernames.get(i));
+        }
 
-
-        //Woops - someone added a controversial book :O Yikes! Let's use remove to avoid any problems. . .
-        authorsBooks.put("Karl Marx", "The Communist Manifesto");
-        authorsBooks.remove("Karl Marx");
-
-
-
-        //Aight - that's ALL GRAVY, what if I wanted to just replace something without having to go through the entire put method?
-        authorsBooks.replace("J.D. Salinger", "Nine Stories");
-
-        System.out.println("authorsBooks = " + authorsBooks);
-        System.out.println("Let's empty this HashMap Out!");
-        authorsBooks.clear();
-        System.out.println("authorsBooks = " + authorsBooks);
-        System.out.println("authorsBooks.isEmpty() = " + authorsBooks.isEmpty());
+        usernames.replace(1, "jordysol");
+        System.out.println(usernames.get(1));
+        usernames.remove(2);
+        usernames.putIfAbsent(5, "sergio");
+        System.out.println(usernames.get(5));
 
 
 //        -------------------------------- Why use an ArrayList vs. a HashMap? --------------------------------
