@@ -4,14 +4,14 @@ public class StudentTest {
 
     public static void main(String[] args) {
 
-        Student joshua = new Student("joshua");
+        Student james = new Student("james");
 
 
-        joshua.addGrade(89);
-        joshua.addGrade(100);
-        joshua.addGrade(50);
-        System.out.println(joshua.getName());
-        System.out.println(joshua.getGradeAverage());
+        james.addGrade(89);
+        james.addGrade(100);
+        james.addGrade(50);
+        System.out.println(james.getName());
+        System.out.println(james.getGradeAverage());
     }
 
 }

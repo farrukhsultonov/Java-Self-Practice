@@ -34,11 +34,11 @@ public class GradesApplication {
 
         HashMap<String, Student> students = new HashMap<>();
 
-        Student joshua = new Student("joshua");
-        joshua.addGrade(89);
-        joshua.addGrade(100);
-        joshua.addGrade(50);
-        students.put("joshua-m", joshua);
+        Student james = new Student("james");
+        james.addGrade(89);
+        james.addGrade(100);
+        james.addGrade(50);
+        students.put("james-m", james);
 
         Student roger = new Student("roger");
         roger.addGrade(98);
@@ -56,7 +56,7 @@ public class GradesApplication {
         louise.addGrade(100);
         louise.addGrade(99);
         louise.addGrade(97);
-        students.put("louise-apple", louise);
+        students.put("louise", louise);
 
         studentInformation(students);
     }
