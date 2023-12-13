@@ -4,11 +4,11 @@ public class ControlFlowExercises {
     public static void main(String[] args) {
 
         // While loop
-//        int i = 5;
-//        while (i <= 15) {
-//            System.out.print(i + " ");
-//            i++;
-//        }
+        int i = 5;
+        while (i <= 15) {
+            System.out.print(i + " ");
+            i++;
+        }
         // ----------------
         // Do While
         // Create a do-while loop that will count by 2's starting with 0 and ending at
@@ -36,13 +36,13 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //            i *= i;
 //        } while (i <= 1_000_000);
-        // For
+//         For
         // -Refactor the previous two exercises to use a for loop instead.
         // ----------------------------
 //        for(int i = 100; i > -11; i -= 5){
 //            System.out.println(i);
 //        }
-
+//
 //        for(long i = 2; i <= 1_000_000; i *= i) {
 //            System.out.println(i);
 //        }
@@ -79,33 +79,33 @@ public class ControlFlowExercises {
 //       TODO: Only continue if the user agrees to.
 
 
-        Scanner scanner = new Scanner(System.in);
-
-        boolean confirm;
-
-
-        do {
-
-            System.out.println("What number would you like to go up to?");
-            int userInt = scanner.nextInt();
-            System.out.println("Here is your table!");
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | -----");
-
-            for(int i = 1; i <= userInt; i++){
-                int square = i * i;
-                int cubed = i * i * i;
+//        Scanner scanner = new Scanner(System.in);
+//
+//        boolean confirm;
+//
+//
+//        do {
+//
+//            System.out.println("What number would you like to go up to?");
+//            int userInt = scanner.nextInt();
+//            System.out.println("Here is your table!");
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | -----");
+//
+//            for(int i = 1; i <= userInt; i++){
+//                int square = i * i;
+//                int cubed = i * i * i;
 //                The "%-7s" in Java is a string format specifier used with the printf() to format an integer value with a minimum width of 7 characters and left-align it within the field.
 //
 //The "-" character is used to indicate left-alignment, while "7" indicates the minimum width of the field. "s" is the conversion character for an integer value.
 //
 //For example, if you have the integer value 123 and you use the format specifier "%-7s", it will be printed as "123 " (with 4 spaces added to the right of the number to make a total width of 7 characters).
-                System.out.printf("%-7s|%-9s|%-6s\n", i, square, cubed);
-            }
-            System.out.print("Continue? [Y/N] ");
-            confirm = scanner.next().equalsIgnoreCase("y");
-        } while(confirm);
-        System.out.println("Cool. See you next time!");
+//                System.out.printf("%-7s|%-9s|%-6s\n", i, square, cubed);
+//            }
+//            System.out.print("Continue? [Y/N] ");
+//            confirm = scanner.next().equalsIgnoreCase("y");
+//        } while(confirm);
+//        System.out.println("Cool. See you next time!");
 
 
 //        TODO: # 4 Prompt the user for a numerical grade from 0 to 100.
@@ -144,7 +144,5 @@ public class ControlFlowExercises {
 //
 //        } while(confirm);
 //        System.out.println("K THanks Bye");
-
     }
-
 }

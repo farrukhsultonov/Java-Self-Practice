@@ -6,13 +6,13 @@ public class ControlStatementsLoops {
 
 
             //---------------------------------- Boolean expressions ------------------------------------------
-//            System.out.println(10 > 5);
-//            System.out.println(5 == 5);
-//            System.out.println(true == false);
-//            System.out.println(2 <= 2);
-//            System.out.println();
+            System.out.println(10 > 5);
+            System.out.println(5 == 5);
+            System.out.println(true == false);
+            System.out.println(2 <= 2);
+            System.out.println();
 //            //---------------------------------- Logical operators ------------------------------------------
-//            System.out.println((true == true) || (true == false));
+            System.out.println((true == true) || (true == false));
             boolean isLoggedIn = true;
             boolean isAdmin = true;
             if (isLoggedIn && isAdmin) {

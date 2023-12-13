@@ -5,7 +5,6 @@ public class Bob {
         String input;
         boolean keepChatting;
 
-
         do {
             System.out.println("What would you like to ask Bob? ");
 
