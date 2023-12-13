@@ -2,13 +2,13 @@ import java.util.Scanner;
 public class Bob {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String input;
+
         boolean keepChatting;
 
         do {
             System.out.println("What would you like to ask Bob? ");
 
-            input = sc.nextLine();
+            String input = sc.nextLine();
 
             if (input.contains("?")) {
                 System.out.println("Sure");

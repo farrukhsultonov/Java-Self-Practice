@@ -6,57 +6,55 @@ import java.util.Scanner;
 //    - Defining Methods
 //    - Calling Methods
 //    - Method Overloading
-//    - Passing Parameters to Methods
 //    - Recursion
 
 public class MethodLecture {
     public static void main(String[] args) {
-
-
-        //            Example:
-        //-- Method without argument
-        System.out.println(startingApplication());
-
-        //-- Method with 2 arguments
-        System.out.println(sayHello("Helloooooooo", "Bob"));
-
-        //-- Method with 2 int arguments
-        System.out.println(addingNums(1,2));
-
-        //-- Method with incorrect arguments
-        //-- Look at the red underline
-        //-- Hover and will be notified
-//        System.out.println(addingNums("hey","bob"));
-
-        System.out.println(birthday("susie", 21));
-
-
-
-        //Version One
-        System.out.println( "Version One: "+ sayHello());
-        System.out.println();
-
-        //Version Two
-        System.out.println("Version Two: \n"+ sayHello(10));
-        System.out.println();
-
-        //Version Three
-        System.out.println("Version Three: "+ sayHello("Hello", "bob"));
-        System.out.println();
-
-        //Version Four
-        System.out.println("Version Four: "+ sayHello("Sassy"));
-        System.out.println();
-
-
-        String changeMe = "hello codeup!";
-        changeString(changeMe);
-        System.out.println(changeMe);
+//
+//
+//        //            Example:
+//        //-- Method without argument
+//        System.out.println(startingApplication());
+//
+//        //-- Method with 2 arguments
+//        System.out.println(sayHello("Helloooooooo", "Bob"));
+//
+//        //-- Method with 2 int arguments
+//        System.out.println(addingNums(1,2));
+//
+//        //-- Method with incorrect arguments
+//        //-- Look at the red underline
+//        //-- Hover and will be notified
+//
+////        System.out.println(addingNums("hey","bob"));
+//
+//        System.out.println(birthday("susie", 21));
+//
+//
+//
+//        //Version One
+//        System.out.println( "Version One: "+ sayHello());
+//        System.out.println();
+//
+//        //Version Two
+//        System.out.println("Version Two: \n"+ sayHello(10));
+//        System.out.println();
+//
+//        //Version Three
+//        System.out.println("Version Three: "+ sayHello("Hello", "bob"));
+//        System.out.println();
+//
+//        //Version Four
+//        System.out.println("Version Four: "+ sayHello("Sassy"));
+//        System.out.println();
+//
+//
+//        String changeMe = "hello codeup!";
+//        changeString(changeMe);
+//        System.out.println(changeMe);
 
 
         count(10);
-
-        iSpy("dog", "furry");
 
 
 //        // Example invocation of getPower method
@@ -66,6 +64,11 @@ public class MethodLecture {
 
 //        // Display the result
         System.out.println(base + " ^ " + exponent + " = " + result);
+
+
+
+
+        iSpy("dog", "furry");
     }
 
 //    Defining Methods
